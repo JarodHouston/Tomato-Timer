@@ -1,0 +1,39 @@
+.header-container {
+  margin-bottom: 30px;
+}
+
+.fade-in-out-slow {
+  animation: fadeInOutSlow 17s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes fadeInOutSlow {
+  0% {
+    opacity: 0;
+    letter-spacing: 2px;
+  }
+  35% {
+    opacity: 1;
+    letter-spacing: 8px;
+  }
+  65% {
+    opacity: 1;
+    letter-spacing: 8px;
+  }
+  100% {
+    opacity: 0;
+    letter-spacing: 2px;
+  }
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+
+  font-size: 4rem;
+  letter-spacing: 5px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}

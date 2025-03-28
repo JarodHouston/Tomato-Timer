@@ -1,0 +1,54 @@
+.timer-container {
+  /* background-color: green; */
+  margin-top: 2vh;
+}
+
+.count-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.minutes-container {
+  width: 40vw;
+  text-align: right;
+}
+.seconds-container {
+  width: 40vw;
+  text-align: left;
+}
+
+.timer-button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.timer-button-container > button {
+  background-color: rgb(246, 170, 151);
+  width: 13vw;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  border: 2px solid rgb(99, 20, 0);
+  border-radius: 8px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateZ(0);
+}
+
+.timer-button-container > button:hover {
+  cursor: pointer;
+  background-color: rgb(243, 185, 171);
+  transform: translateY(-5px) translateZ(10px) scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle additional shadow */
+}
+
+h1 {
+  font-size: 9rem;
+  margin: 30px 1.3px;
+  margin-top: 0px;
+  color: rgb(255, 225, 225);
+}
