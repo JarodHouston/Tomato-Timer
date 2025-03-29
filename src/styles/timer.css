@@ -28,7 +28,8 @@
 }
 
 .timer-button-container > button {
-  background-color: rgb(246, 170, 151);
+  /* background-color: rgb(246, 170, 151); */
+  background-color: rgb(255, 255, 255, 0.7);
   width: 13vw;
   height: 2.5rem;
   font-size: 1.2rem;
@@ -41,7 +42,7 @@
 
 .timer-button-container > button:hover {
   cursor: pointer;
-  background-color: rgb(243, 185, 171);
+  background-color: rgb(255, 255, 255, 0.8);
   transform: translateY(-5px) translateZ(10px) scale(1.05);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle additional shadow */
 }
