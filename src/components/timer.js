@@ -5,7 +5,15 @@ function Timer({ time }) {
   const defaultSeconds = time;
 
   const [seconds, setSeconds] = useState(defaultSeconds);
+  const [startTime, setStartTime] = useState(null);
+  const [currentStartTime, setCurrentStartTime] = useState(defaultSeconds);
   const [isRunning, setIsRunning] = useState(false);
+
+  //   useEffect(() => {
+  //     if (!startTime) {
+  //       setStartTime(Date.now());
+  //     }
+  //   }, [startTime]);
 
   useEffect(() => {
     setSeconds(time);
@@ -17,7 +25,9 @@ function Timer({ time }) {
 
     if (isRunning && seconds > 0) {
       interval = setInterval(() => {
-        setSeconds((prevSeconds) => prevSeconds - 1);
+        const now = Date.now();
+        const elapsed = Math.floor((now - startTime) / 1000);
+        setSeconds(Math.max(currentStartTime - elapsed, 0));
       }, 1000);
     }
 
@@ -38,15 +48,18 @@ function Timer({ time }) {
 
   const startTimer = () => {
     setIsRunning(true);
+    setStartTime(Date.now());
   };
 
   const stopTimer = () => {
     setIsRunning(false);
+    setCurrentStartTime(seconds);
   };
 
   const restartTimer = () => {
     setIsRunning(false);
     setSeconds(defaultSeconds);
+    setCurrentStartTime(defaultSeconds);
   };
 
   return (

@@ -24,7 +24,8 @@
 
 .fruit-image {
   position: absolute;
-  width: 15vw;
+  max-width: 15vw;
+  max-height: 20vh;
   left: 5vw;
   top: 2vh;
   opacity: 70%;
